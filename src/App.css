@@ -1,0 +1,44 @@
+#root {
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+h4, h3 {
+  padding: 0 2rem;
+  margin: 0;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.panelContent {
+  display: flex;
+  height: 320px;
+  overflow: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 440px;
+}
+
+td {
+  border: 1px solid #FFFFFF;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.selector {
+  margin: 0 10px;
+}
+
+.recharts-tooltip-label {
+  color: #000000;
+}
