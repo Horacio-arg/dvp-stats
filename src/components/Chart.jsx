@@ -25,7 +25,11 @@ function Chart({
   return (
     <div className="panel" style={{'width': width}}>
       <h3>{title} (<a onClick={switchGraph}>{showTable ? 'graph' : "table"}</a>)</h3>
-      <h4>Advertenties: {total} {showMedian && `- Mediaan: ${getMedian(data)}`} {showAverage && `- Gemiddeld: ${getAverage(data)}`}</h4>
+      <div className="stats">
+        <span>Totaal: {total}</span>
+        {showMedian && <span>Mediaan: {getMedian(data)}</span>}
+        {showAverage && <span>Gemiddeld: {getAverage(data)}</span>}
+      </div>
       <div className="filters">{filters}</div>
       <div className="panelContent">
         {isEmpty(data) && 'Geen data'}

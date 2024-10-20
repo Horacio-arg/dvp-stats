@@ -20,6 +20,11 @@ h4, h3 {
   overflow: auto;
 }
 
+.stats {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 table {
   border-collapse: collapse;
   width: 440px;
