@@ -23,12 +23,9 @@ export default function ServiceExtraPriceChart() {
 		showMedian={true}
 		showAverage={true}
 		color="#ce0c0b"
-		filters={
-			<>
-				<ServiceSelector selected={selectedService} setSelected={setSelectedService} />
-				<DateTypeSelector selected={selectedDateType} setSelected={setSelectedDateType} />
-				<GenderSelector selected={selectedGender} setSelected={setSelectedGender} />
-			</>
-		}
-	/>
+	>
+		<ServiceSelector selected={selectedService} setSelected={setSelectedService} />
+		<DateTypeSelector selected={selectedDateType} setSelected={setSelectedDateType} />
+		<GenderSelector selected={selectedGender} setSelected={setSelectedGender} />
+	</Chart>
 }

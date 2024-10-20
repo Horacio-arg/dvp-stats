@@ -13,10 +13,8 @@ export default function HeightChart() {
 		getter: item => item.height,
 		filter: item => item.gender === selectedGender && includes(item.dateTypes, selectedDateType)
 	})
-	return <Chart title="Lengte" data={data} showMedian={true} showAverage={true} color="#31a551" filters={
-		<>
-			<DateTypeSelector selected={selectedDateType} setSelected={setSelectedDateType} />
-			<GenderSelector selected={selectedGender} setSelected={setSelectedGender} />
-		</>
-	} />
+	return <Chart title="Lengte" data={data} showMedian={true} showAverage={true} color="#31a551">
+		<DateTypeSelector selected={selectedDateType} setSelected={setSelectedDateType} />
+		<GenderSelector selected={selectedGender} setSelected={setSelectedGender} />
+	</Chart>
 }

@@ -13,10 +13,8 @@ export default function AgeChart() {
 		getter: item => item.age,
 		filter: item => item.gender === selectedGender && includes(item.dateTypes, selectedDateType)
 	})
-	return <Chart title="Leeftijd" data={data} showMedian={true} showAverage={true} filters={
-		<>
-			<DateTypeSelector selected={selectedDateType} setSelected={setSelectedDateType} />
-			<GenderSelector selected={selectedGender} setSelected={setSelectedGender} />
-		</>
-	}/>
+	return <Chart title="Leeftijd" data={data} showMedian={true} showAverage={true}>
+		<DateTypeSelector selected={selectedDateType} setSelected={setSelectedDateType} />
+		<GenderSelector selected={selectedGender} setSelected={setSelectedGender} />
+	</Chart>
 }

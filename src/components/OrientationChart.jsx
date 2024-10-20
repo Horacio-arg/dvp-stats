@@ -13,10 +13,8 @@ export default function OrientationChart() {
 		getter: item => item.orientation,
 		filter: item => item.gender === selectedGender && includes(item.dateTypes, selectedDateType)
 	})
-	return <Chart title="Seksuele voorkeur" data={data} color="#31a551" filters={
-		<>
-			<DateTypeSelector selected={selectedDateType} setSelected={setSelectedDateType} />
-			<GenderSelector selected={selectedGender} setSelected={setSelectedGender} />
-		</>
-	} />
+	return <Chart title="Seksuele voorkeur" data={data} color="#31a551">
+		<DateTypeSelector selected={selectedDateType} setSelected={setSelectedDateType} />
+		<GenderSelector selected={selectedGender} setSelected={setSelectedGender} />
+	</Chart>
 }

@@ -16,21 +16,20 @@ function Chart({
   showMedian = false,
   showAverage = false,
   color = '#8884d8',
-  filters,
   children
 }) {
   const [showTable, setShowTable] = useState(false)
   const switchGraph = () => setShowTable(!showTable)
   const total = sumBy(data, 'totaal')
   return (
-    <div className="panel" style={{'width': width}}>
+    <div style={{'width': width}}>
       <h3>{title} (<a onClick={switchGraph}>{showTable ? 'graph' : "table"}</a>)</h3>
       <div className="stats">
         <span>Totaal: {total}</span>
         {showMedian && <span>Mediaan: {getMedian(data)}</span>}
         {showAverage && <span>Gemiddeld: {getAverage(data)}</span>}
       </div>
-      <div className="filters">{filters}</div>
+      {children && <div className="filters">{children}</div>}
       <div className="panelContent">
         {isEmpty(data) && 'Geen data'}
         {!isEmpty(data) && !showTable &&
@@ -49,7 +48,6 @@ function Chart({
             </tr>)}
           </table>
         }
-        {children}
       </div>
     </div>
   )

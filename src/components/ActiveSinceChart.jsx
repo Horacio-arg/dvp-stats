@@ -13,10 +13,8 @@ export default function ActiveSinceChart() {
 		getter: item => new Date(item.activeSince).getFullYear(),
 		filter: item => item.gender === selectedGender && includes(item.dateTypes, selectedDateType)
 	})
-	return <Chart title="Actief sinds" data={data} showMedian={true} filters={
-		<>
-			<DateTypeSelector selected={selectedDateType} setSelected={setSelectedDateType} />
-			<GenderSelector selected={selectedGender} setSelected={setSelectedGender} />
-		</>
-	} />
+	return <Chart title="Actief sinds" data={data} showMedian={true}>
+		<DateTypeSelector selected={selectedDateType} setSelected={setSelectedDateType} />
+		<GenderSelector selected={selectedGender} setSelected={setSelectedGender} />
+	</Chart>
 }

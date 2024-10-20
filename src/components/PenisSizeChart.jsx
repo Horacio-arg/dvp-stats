@@ -13,14 +13,12 @@ export default function PenisSizeChart() {
 		getter: item => item.penisSize,
 		filter: item => item.gender === selectedGender && includes(item.dateTypes, selectedDateType)
 	})
-	return <Chart title="Penis lengte" data={data} showMedian={true} showAverage={true} color="#31a551" filters={
-		<>
-			<DateTypeSelector selected={selectedDateType} setSelected={setSelectedDateType} />
-			<GenderSelector
-				selected={selectedGender}
-				setSelected={setSelectedGender}
-				options={['Shemale', 'Man']}
-			/>
-		</>
-	} />
+	return <Chart title="Penis lengte" data={data} showMedian={true} showAverage={true} color="#31a551">
+		<DateTypeSelector selected={selectedDateType} setSelected={setSelectedDateType} />
+		<GenderSelector
+			selected={selectedGender}
+			setSelected={setSelectedGender}
+			options={['Shemale', 'Man']}
+		/>
+	</Chart>
 }

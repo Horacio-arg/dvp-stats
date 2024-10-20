@@ -12,7 +12,6 @@ import OrientationChart from './components/OrientationChart'
 import OriginChart from './components/OriginChart'
 import PenisSizeChart from './components/PenisSizeChart'
 import PriceChart from './components/PriceChart'
-import PriceWithExtrasChart from './components/PriceWithExtrasChart'
 import ServiceChart from './components/ServiceChart'
 import ServiceExtraPriceChart from './components/ServiceExtraPriceChart'
 import GenderSelector from './components/GenderSelector'
@@ -52,7 +51,6 @@ function App() {
       <h2>Prijzen</h2>
       <div className="row">
         <PriceChart />
-        <PriceWithExtrasChart />
       </div>
     </>
   )

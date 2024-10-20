@@ -12,6 +12,7 @@ h4, h3 {
 .row {
   display: flex;
   flex-wrap: wrap;
+  align-items: stretch;
 }
 
 .panelContent {
@@ -42,6 +43,17 @@ td {
 
 .selector {
   margin: 0 10px;
+}
+
+.extras-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.extras-content {
+  display: flex;
+  height: 320px;
 }
 
 .recharts-tooltip-label {

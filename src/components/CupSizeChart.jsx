@@ -13,14 +13,12 @@ export default function CupSizeChart() {
 		getter: item => item.cupSize,
 		filter: item => item.gender === selectedGender && includes(item.dateTypes, selectedDateType)
 	})
-	return <Chart title="Cupmaat" data={data} showMedian={true} color="#31a551" filters={
-		<>
-			<DateTypeSelector selected={selectedDateType} setSelected={setSelectedDateType} />
-			<GenderSelector
-				selected={selectedGender}
-				setSelected={setSelectedGender}
-				options={['Vrouw', 'Shemale', 'Stel']}
-			/>
-		</>
-	} />
+	return <Chart title="Cupmaat" data={data} showMedian={true} color="#31a551">
+		<DateTypeSelector selected={selectedDateType} setSelected={setSelectedDateType} />
+		<GenderSelector
+			selected={selectedGender}
+			setSelected={setSelectedGender}
+			options={['Vrouw', 'Shemale', 'Stel']}
+		/>
+	</Chart>
 }

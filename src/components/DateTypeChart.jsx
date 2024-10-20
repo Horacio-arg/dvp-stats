@@ -11,9 +11,7 @@ export default function DateTypeChart() {
 		filter: item => item.gender === selectedGender,
 		flatMap: item => item.dateTypes
 	})
-	return <Chart
-		title="Type date"
-		data={data}
-		filters={<GenderSelector selected={selectedGender} setSelected={setSelectedGender} />}
-	/>
+	return <Chart title="Type date" data={data}>
+		<GenderSelector selected={selectedGender} setSelected={setSelectedGender} />
+	</Chart>
 }

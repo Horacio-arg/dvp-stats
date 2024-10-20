@@ -13,10 +13,8 @@ export default function BodyTypeChart() {
 		getter: item => item.bodyType,
 		filter: item => item.gender === selectedGender && includes(item.dateTypes, selectedDateType)
 	})
-	return <Chart title="Lichaamsbow" data={data} color="#31a551" filters={
-		<>
-			<DateTypeSelector selected={selectedDateType} setSelected={setSelectedDateType} />
-			<GenderSelector selected={selectedGender} setSelected={setSelectedGender} />
-		</>
-	} />
+	return <Chart title="Lichaamsbow" data={data} color="#31a551">
+		<DateTypeSelector selected={selectedDateType} setSelected={setSelectedDateType} />
+		<GenderSelector selected={selectedGender} setSelected={setSelectedGender} />
+	</Chart>
 }

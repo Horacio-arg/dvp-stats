@@ -23,10 +23,8 @@ export default function LanguageChart() {
 		filter: item => item.gender === selectedGender && includes(item.dateTypes, selectedDateType),
 		flatMap: item => item.languages.map(mapLanguage)
 	})
-	return <Chart title="Talen" data={data} filters={
-		<>
-			<DateTypeSelector selected={selectedDateType} setSelected={setSelectedDateType} />
-			<GenderSelector selected={selectedGender} setSelected={setSelectedGender} />
-		</>
-	} />
+	return <Chart title="Talen" data={data}>
+		<DateTypeSelector selected={selectedDateType} setSelected={setSelectedDateType} />
+		<GenderSelector selected={selectedGender} setSelected={setSelectedGender} />
+	</Chart>
 }
